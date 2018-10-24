@@ -73,7 +73,7 @@
                     type: "warning",
                     showCancelButton: true,
                     confirmButtonClass: "btn-danger",
-                    confirmButtonText: "Cancel",
+                    confirmButtonText: "Confirm",
                     closeOnConfirm: false
                 }, function(isConfirm) {
                     if (isConfirm) {
