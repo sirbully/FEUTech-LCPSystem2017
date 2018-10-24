@@ -81,7 +81,7 @@
                             title:"This appointment has been cancelled!", 
                             type: "success"
                         }, function(ok) {
-                            if(ok) { $(location).attr('href', '<?=base_url()?>dashboard/cancelappt/'+event.id) }
+                            if(ok) { $(location).attr('href', '<?=base_url()?>clinic/cancelappt/'+event.id) }
                         });
                     }
                 });
@@ -101,7 +101,7 @@
                             title:"You have successfully rescheduled this appointment!", 
                             type: "success"
                         }, function(ok) {
-                            if(ok) { $(location).attr('href', '<?=base_url()?>dashboard/resched/'+event.id+'/'+event.start.format()+'/'+event.end.format()); }
+                            if(ok) { $(location).attr('href', '<?=base_url()?>clinic/resched/'+event.id+'/'+event.start.format()+'/'+event.end.format()); }
                         });
                     } else { revertFunc(); }
                 });

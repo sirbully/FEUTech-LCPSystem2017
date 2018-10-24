@@ -112,6 +112,10 @@ class Dashboard extends CI_Controller {
         exit();
     }
 
+    public function resched(){
+        
+    }
+
     public function logout() {
         $this->session->sess_destroy();
         redirect('portal');
