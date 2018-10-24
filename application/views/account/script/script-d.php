@@ -33,7 +33,7 @@
                 type: "warning",
                 showCancelButton: true,
                 confirmButtonClass: "btn-danger",
-                confirmButtonText: "Delete",
+                confirmButtonText: "Remove",
                 closeOnConfirm: false
             }, function(isConfirm) {
                 if (isConfirm) {

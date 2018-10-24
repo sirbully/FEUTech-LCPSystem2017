@@ -91,7 +91,7 @@ class Doctor extends CI_Controller{
         );
         $this->load->view('account/header-c',$doctor);
         $this->load->view('account/script/script-l');
-        $this->load->view('account/sidebar-c');
+        $this->load->view('account/sidebar-d');
         $this->load->view('account/logs');
     }
     
@@ -100,7 +100,7 @@ class Doctor extends CI_Controller{
             "clinic" => $this->lcp_model->fetch('user_tbl', array('user_id'=>$this->session->userdata('user_id'))),
         );
         $this->load->view('account/header-c',$doctor);
-        $this->load->view('account/sidebar-c');
+        $this->load->view('account/sidebar-d');
         $this->load->view('account/settings');
         $this->load->view('account/sidelogs');
         $this->load->view('account/footer-c');
