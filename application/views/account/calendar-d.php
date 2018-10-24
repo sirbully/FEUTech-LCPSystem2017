@@ -16,7 +16,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
-                    <form method="post" action="<?=base_url()?>clinic/addapt">
+                    <form method="post" action="<?=base_url()?>doctor/addapt">
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="name">Name:</label>
@@ -83,7 +83,7 @@
                         </div>
 
                         <div class="form-group text-center">
-                            <input type="hidden" name="doc_id" value="<?=$this->uri->segment(3)?>">
+                            <input type="hidden" name="doc_id" value="<?=$this->session->userdata('user_id')?>">
                             <input type="hidden" name="start" id="start">
                             <input type="hidden" name="end" id="end">
                             <input type="submit" class="btn btn-primary" value="Schedule Event" style="cursor:pointer">

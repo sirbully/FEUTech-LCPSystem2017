@@ -31,13 +31,18 @@ class Doctor extends CI_Controller{
     }
 
     function addapt(){
+        $clist = $this->lcp_model->getClinicId();
+        foreach ($clist as $c):
+            if ($this->input->post('doc_id')==$c->doc_id ) { $clinic_id = $c->user_id; }
+        endforeach;
+
         $appt = array(
             'title' => $this->input->post('name'),
             'description' => $this->input->post('desc'),
             'start' => $this->input->post('start'),
             'end' => $this->input->post('end'),
             'doc_id' => $this->input->post('doc_id'),
-            'clinic_id' => $this->session->userdata('user_id'),
+            'clinic_id' => $clinic_id,
         );
         
         $this->lcp_model->add_event($appt);

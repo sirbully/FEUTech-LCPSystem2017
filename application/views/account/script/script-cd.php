@@ -10,12 +10,12 @@
         $('#calendar').fullCalendar({
             events: function(start, end, timezone, callback) {
                 $.ajax({
-                    url: '<?php echo base_url() ?>dashboard/jsonc',
+                    url: '<?php echo base_url() ?>dashboard/jsoncd',
                     dataType: 'json',
                     data: {
                         start: start.unix(),
                         end: end.unix(),
-                        doc_id: <?=$this->session->userdata('user_id')?>
+                        doc_id: <?= $this->session->userdata('user_id')?>
                     }, success: function(msg) {
                         var events = msg.events;
                         callback(events);

@@ -73,6 +73,10 @@ class Lcp_Model extends CI_Model {
         return $this->db->select('*')->from('clinic_tbl')->where("doc_id =",$id)->get()->result();
     }
 
+    public function getClinicId(){
+        return $this->db->select('*')->get("clinic_tbl")->result();
+    }
+
     public function get_events($start, $end,$id){
         return $this->db->where("start >=", $start)->where("end <=", $end)->where("doc_id =",$id)->get("sched_tbl");
     }
